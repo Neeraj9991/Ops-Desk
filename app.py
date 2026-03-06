@@ -4,10 +4,17 @@ import pandas as pd
 from supabase import create_client, Client
 import json
 import os
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load Supabase credentials (works locally and on Streamlit Cloud)
+try:
+    SUPABASE_URL = st.secrets["SUPABASE_URL"]
+    SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+except Exception:
+    from dotenv import load_dotenv
+    load_dotenv()
+    SUPABASE_URL = os.getenv("SUPABASE_URL")
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
 
 @st.cache_data
 def load_excel_data():
@@ -215,9 +222,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Supabase Config
-SUPABASE_URL = os.environ.get("SUPABASE_URL")
-SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 
 @st.cache_resource
 def get_supabase_client():
