@@ -1,0 +1,26 @@
+[
+    {
+        "UserId": "1",
+        "Name": "Jyoti",
+        "Role": "CRI",
+        "Password": "Jyoti@CRI"
+    },
+    {
+        "UserId": "2",
+        "Name": "Arun",
+        "Role": "Opr",
+        "Password": "Arun@cr"
+    },
+    {
+        "UserId": "3",
+        "Name": "Deepak",
+        "Role": "Opr",
+        "Password": "Deepak@CRO"
+    },
+    {
+        "UserId": "4",
+        "Name": "Neeraj",
+        "Role": "Admin",
+        "Password": "NeerajBalodi@99"
+    }
+]
