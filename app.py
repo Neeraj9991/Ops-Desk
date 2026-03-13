@@ -598,6 +598,8 @@ else:
                         else:
                             # Convert to Pandas DataFrame
                             df = pd.DataFrame(response.data)
+                            if 'EMP_ID' in df.columns:
+                                df['EMP_ID'] = df['EMP_ID'].apply(lambda x: int(x) if pd.notnull(x) else "")
                             
                             # --- ROBUST DATE FILTERING ---
                             if 'DATE' in df.columns:
