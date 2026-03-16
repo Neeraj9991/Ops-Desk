@@ -22,5 +22,11 @@
         "Name": "Neeraj",
         "Role": "Admin",
         "Password": "NeerajBalodi@99"
-    }
+    },
+    {
+        "UserId": "5",
+        "Name": "Sneha",
+        "Role": "Opr",
+        "Password": "Sneha@123"
+    },
 ]
